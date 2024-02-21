@@ -1,0 +1,94 @@
+data:
+  data_keys: ['metr-la', 'pems-bay', 'shenzhen', 'chengdu_m','bj','BM','DC','man']
+  metr-la:
+    dataset_path: ../../Data/TimeSeries/Trafficdata/metr-la/dataset.npy
+    adjacency_matrix_path: ../../Data/TimeSeries/Trafficdata/metr-la/matrix.npy
+    time_step: 34272
+    node_num: 207
+    speed_mean: 58.465786
+    speed_std: 12.905341
+
+  
+  pems-bay:
+    dataset_path: ../../Data/TimeSeries/Trafficdata/pems-bay/dataset.npy
+    adjacency_matrix_path: ../../Data/TimeSeries/Trafficdata/pems-bay/matrix.npy
+    time_step: 52116
+    node_num: 325
+    speed_mean: 62.621582859
+    speed_std: 9.58811369696
+
+  chengdu_m:
+    dataset_path: ../../Data/TimeSeries/Trafficdata/chengdu_m/dataset.npy
+    adjacency_matrix_path: ../../Data/TimeSeries/Trafficdata/chengdu_m/matrix.npy
+    time_step: 17280
+    node_num: 524
+    speed_mean: 29.0982979559
+    speed_std: 9.75304346669
+  
+  shenzhen:
+    dataset_path: ../../Data/TimeSeries/Trafficdata/shenzhen/dataset.npy
+    adjacency_matrix_path: ../../Data/TimeSeries/Trafficdata/shenzhen/matrix.npy
+    time_step: 17280
+    node_num: 627
+    speed_mean: 30.5735608506
+    speed_std: 11.0922606598
+
+  bj:
+    dataset_path: ../../Data/TimeSeries/CrowdFlow/Data_bj/dataset.npy
+    adjacency_matrix_path: ../../Data/TimeSeries/CrowdFlow/Data_bj/matrix.npy
+    nonspatial_adjacency_matrix_path: ../../Data/TimeSeries/CrowdFlow/Data_bj/matrix_nonspatial.npy
+    time_step: 744 
+    node_num: 661   # 1010
+    speed_mean: 9.803120882338588
+    speed_std: 11.185228480088625
+
+  BM:
+    dataset_path: ../../Data/TimeSeries/CrowdFlow/Data_BM/dataset.npy
+    adjacency_matrix_path: ../../Data/TimeSeries/CrowdFlow/Data_BM/matrix.npy
+    nonspatial_adjacency_matrix_path: ../../Data/TimeSeries/CrowdFlow/Data_BM/matrix_nonspatial.npy
+    time_step: 3624
+    node_num: 267  # 403
+    speed_mean: 18.763405221949384
+    speed_std: 28.72710287862021
+
+  DC:
+    dataset_path: ../../Data/TimeSeries/CrowdFlow/Data_DC/dataset.npy
+    adjacency_matrix_path: ../../Data/TimeSeries/CrowdFlow/Data_DC/matrix.npy
+    nonspatial_adjacency_matrix_path: ../../Data/TimeSeries/CrowdFlow/Data_DC/matrix_nonspatial.npy
+    time_step: 3624
+    node_num: 194  # 237
+    speed_mean: 30.870996762704536
+    speed_std: 58.95320073226443
+  
+  man:
+    dataset_path: ../../Data/TimeSeries/CrowdFlow/Data_man/dataset.npy
+    adjacency_matrix_path: ../../Data/TimeSeries/CrowdFlow/Data_man/matrix.npy
+    nonspatial_adjacency_matrix_path: ../../Data/TimeSeries/CrowdFlow/Data_man/matrix_nonspatial.npy
+    time_step: 4368
+    node_num: 195 
+    speed_mean: 70.06630975861745
+    speed_std: 71.8523755872404
+
+  
+task:
+  his_num: 12
+  pred_num: 6
+  batch_size: 64   
+  test_batch_size: 128
+  task_num: 2
+
+model:
+  node_feature_dim: 2
+  edge_feature_dim: 4
+  message_dim: 2
+  hidden_dim: 16
+  output_dim: 1
+  meta_dim: 16
+  update_lr: 0.0005 
+  meta_lr: 0.0002 # 0.0001
+  loss_lambda: 1.5
+  update_step: 5
+  update_step_test: 10
+  tp: True
+  sp: True
+  
