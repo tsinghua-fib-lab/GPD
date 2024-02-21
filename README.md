@@ -1,7 +1,7 @@
 # A Generative Pre-Training Framework for Spatio-Temporal Graph Transfer Learning
 ![model framework](assets/framework.png "Model Architecture")
 
-The official implementation of the ICLR 24 submission entitled "A Generative Pre-training Framework for Spatio-Temporal Graph Transfer Learning". 
+The official implementation of the ICLR 2024 paper entitled "A Generative Pre-training Framework for Spatio-Temporal Graph Transfer Learning". 
 
 In this project, we propose a novel framework, GPDiff, which performs generative pre-training on a collection of model parameters optimized with data from source cities. Our proposed approach recasts spatio-temporal graph transfer learning as pre-training a generative hypernetwork, which generates tailored model parameters guided by prompts. 
 Our framework has the potential to revolutionize smart city applications in data-scarce environments and contribute to more sustainable and efficient urban development.
