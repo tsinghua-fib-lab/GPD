@@ -1,9 +1,10 @@
-# A Generative Pre-Training Framework for Spatio-Temporal Graph Transfer Learning
+## Spatio-Temporal Few-Shot Learning via Diffusive Neural Network Generation
+
 ![model framework](assets/framework.png "Model Architecture")
 
-The official implementation of the ICLR 2024 paper entitled "A Generative Pre-training Framework for Spatio-Temporal Graph Transfer Learning". 
+The official implementation of the ICLR 2024 paper entitled "Spatio-Temporal Few-Shot Learning via Diffusive Neural Network Generation". 
 
-In this project, we propose a novel framework, GPDiff, which performs generative pre-training on a collection of model parameters optimized with data from source cities. Our proposed approach recasts spatio-temporal graph transfer learning as pre-training a generative hypernetwork, which generates tailored model parameters guided by prompts. 
+In this project, we propose a novel framework, GPD, which performs generative pre-training on a collection of model parameters optimized with data from source cities. Our proposed approach recasts spatio-temporal graph transfer learning as pre-training a generative hypernetwork, which generates tailored model parameters guided by prompts. 
 Our framework has the potential to revolutionize smart city applications in data-scarce environments and contribute to more sustainable and efficient urban development.
 
 ## Installation
@@ -64,7 +65,7 @@ After full-trained, run Pretrain\PrepareParams\model2tensor.py to extract parame
 
 To train diffusion model and generate the parameters of the target city:
 
-``cd GPDiff``
+``cd GPD``
 
 ``CUDA_VISIBLE_DEVICES=0 python 1Dmain.py --expIndex 140 --targetDataset metr-la --modeldim 512 --epochs 80000 --diffusionstep 500 --basemodel v_GWN  --denoise Trans1``
 
@@ -83,7 +84,7 @@ To train diffusion model and generate the parameters of the target city:
 
 ![conditioning](assets/condition.png "Conditioning Strategies")
 
-The sample result is in GPDiff/Output/expXX/.
+The sample result is in GPD/Output/expXX/.
 
 ## Finetune and Evaluate
 To finetune the generated parameters of the target city and evaluate, run:
@@ -117,6 +118,6 @@ To finetune the generated parameters of the target city and evaluate, run:
     - Trans4: Cross attention.
     - Trans5: Adaptive LayerNorm.
 ```bash
-cd GPDiff
+cd GPD
 CUDA_VISIBLE_DEVICES=3 python 1Dmain.py --expIndex 140 --targetDataset metr-la --modeldim 512 --epochs 80000 --diffusionstep 500 --basemodel v_GWN  --denoise Trans1
 -->
