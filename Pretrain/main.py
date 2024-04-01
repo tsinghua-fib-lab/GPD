@@ -163,7 +163,7 @@ if __name__ == '__main__':
 
             logger.info("train node_index: {}".format(node_index))
             
-            train_dataset = traffic_dataset2(data_args, task_args, node_index, "task2", args.ifchosenode, test_data=args.test_dataset, target_days=args.target_days, ifspatial = args.ifspatial, datanum = args.datanum)
+            train_dataset = traffic_dataset2(data_args, task_args, node_index, "singlePretrain", args.ifchosenode, test_data=args.test_dataset, target_days=args.target_days, ifspatial = args.ifspatial, datanum = args.datanum)
             
             train_meanstd = [train_dataset.mean,train_dataset.std]
             
