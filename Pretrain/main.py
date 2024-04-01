@@ -157,7 +157,7 @@ if __name__ == '__main__':
         step = 0
         print('{} totalnum: {}'.format(args.test_dataset, node_num))
         for node_index in range(node_num):
-            node_index = 15
+
             model = StgnnSet(data_args, task_args, model_args, model=args.model).to(device=args.device)
           
 
