@@ -101,6 +101,15 @@ To finetune the generated parameters of the target city and evaluate, run:
   - ``epochs`` specifies the number of iterations.
   - ``target_days`` specifies the amount of data used in finetune stage.
 
+## overall instructions
+Let me give an example of the overall instructions. If you want to set 'metr-la' as target city:
+
+ - In pretrain: set the ``test_data`` as 'PMS-Bay', 'Didi-Chengdu', and 'Didi-Shenzhen' respectively to pretrain the models of other three source cities.
+ - In Diffusion: set the ``targetDataset`` as 'metr-la'.
+ - In finetune: set the ``test_dataset`` as 'metr-la'.
+
+Since finetune and pretraining share the same code framework and use the same set of parameter names, this can be a little confusing and I will try to make the distinction between them in later versions of the code.
+
 <!--
 ## Model training & Evaluating
 - We integrate the zeroshot evaluation module into the diffusion.
